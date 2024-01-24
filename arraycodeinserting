@@ -1,0 +1,32 @@
+import java.util.Scanner; //importing util package
+public class arraycodeinserting //creating class
+{
+    public static void main(String[] args) //creating main method
+    {
+        int n, pos, x; //predefining variables
+        Scanner s = new Scanner(System.in); //creating scanner to store array elements
+        System.out.print("Enter no. of elements you want in array:"); //storing no. of elements in array
+        n = s.nextInt(); //storing number of elements of array
+        int a[] = new int[n+1];
+        System.out.println("Enter all the elements:"); //storing elements 
+        for(int i = 0; i < n; i++) 
+        { 
+            a[i] = s.nextInt();
+        }
+        System.out.print("Enter the position where you want to insert element:"); //storing position of inserted element
+        pos = s.nextInt(); //variable in which position is being stored
+        System.out.print("Enter the element you want to insert:"); //storing inserted element
+        x = s.nextInt(); // position in which element is being stored
+        for(int i = (n-1); i >= (pos-1); i--) //shifting all elements forward which are after the position at which user wants to store element 'x'
+        {
+            a[i+1] = a[i]; 
+        }
+        a[pos-1] = x; //inserting x in array 
+        System.out.print("After inserting:"); //printing array 
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(a[i]+",");
+        }
+        System.out.print(a[n]);
+    }
+}
