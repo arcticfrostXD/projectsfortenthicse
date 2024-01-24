@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CourierCompany
+comment1.params=w\ b
+comment1.target=CourierCompany(double,\ char)
+comment2.params=w\ b
+comment2.target=void\ Calculate(double,\ char)
+comment3.params=Args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
