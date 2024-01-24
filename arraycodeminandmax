@@ -1,0 +1,27 @@
+import java.util.Scanner; //importing util package
+
+public class arraycodeminandmax //creating class
+{
+    public static void main(String args[]) { //creating main method
+        Scanner in = new Scanner(System.in); //creating a scanner to input array
+        int arr[] = new int[20]; //storing limits of array
+        System.out.println("Enter 20 numbers:"); //inputing array 
+        for (int i = 0; i < 20; i++) {    // to store the elements of array
+            arr[i] = in.nextInt();
+        }
+        int min = arr[0], max = arr[0], sum = 0; //defining variables
+        for (int i = 0; i < arr.length; i++) { // to perform all functions
+            if (arr[i] < min)     // to find out smallest value 
+                min = arr[i]; //storing smallest value
+                
+            if (arr[i] > max)  // to find out largest value
+                max = arr[i]; //storing largest value
+                
+            sum += arr[i];  // to find out sum of all elements of the array
+        }
+        
+        System.out.println("Largest Number = " + max); //printing largest number
+        System.out.println("Smallest Number = " + min); //printing smallest number
+        System.out.println("Sum = " + sum); //printing sum
+    }
+}
